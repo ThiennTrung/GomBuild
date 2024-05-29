@@ -29,12 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EXTEND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TYPE = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.FILENAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -47,16 +58,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EXTEND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TYPE = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.FILENAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,6 +130,83 @@
             this.dataGridView1.Size = new System.Drawing.Size(980, 349);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // NAME
+            // 
+            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NAME.DataPropertyName = "NAME";
+            this.NAME.HeaderText = "Name";
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            // 
+            // EXTEND
+            // 
+            this.EXTEND.DataPropertyName = "EXTEND";
+            this.EXTEND.HeaderText = "Extend";
+            this.EXTEND.Name = "EXTEND";
+            this.EXTEND.ReadOnly = true;
+            this.EXTEND.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.EXTEND.Visible = false;
+            this.EXTEND.Width = 50;
+            // 
+            // TYPE
+            // 
+            this.TYPE.DataPropertyName = "TYPE";
+            this.TYPE.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.TYPE.HeaderText = "Type";
+            this.TYPE.Name = "TYPE";
+            this.TYPE.Width = 120;
+            // 
+            // FILENAME
+            // 
+            this.FILENAME.DataPropertyName = "FILENAME";
+            this.FILENAME.HeaderText = "FILENAME";
+            this.FILENAME.Name = "FILENAME";
+            this.FILENAME.ReadOnly = true;
+            this.FILENAME.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 65;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Path Build";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ISDUP";
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            this.Column5.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column3.HeaderText = "Override";
+            this.Column3.Name = "Column3";
+            this.Column3.ToolTipText = "File trùng mặc định cột này = true";
+            this.Column3.Width = 58;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column4.HeaderText = "New Version";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 78;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Detail";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 45;
             // 
             // label4
             // 
@@ -234,82 +312,6 @@
             this.textBox4.Size = new System.Drawing.Size(324, 106);
             this.textBox4.TabIndex = 18;
             // 
-            // NAME
-            // 
-            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NAME.DataPropertyName = "NAME";
-            this.NAME.HeaderText = "Name";
-            this.NAME.Name = "NAME";
-            this.NAME.ReadOnly = true;
-            // 
-            // EXTEND
-            // 
-            this.EXTEND.DataPropertyName = "EXTEND";
-            this.EXTEND.HeaderText = "Extend";
-            this.EXTEND.Name = "EXTEND";
-            this.EXTEND.ReadOnly = true;
-            this.EXTEND.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.EXTEND.Visible = false;
-            this.EXTEND.Width = 50;
-            // 
-            // TYPE
-            // 
-            this.TYPE.DataPropertyName = "TYPE";
-            this.TYPE.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.TYPE.HeaderText = "Type";
-            this.TYPE.Name = "TYPE";
-            this.TYPE.Width = 120;
-            // 
-            // FILENAME
-            // 
-            this.FILENAME.DataPropertyName = "FILENAME";
-            this.FILENAME.HeaderText = "FILENAME";
-            this.FILENAME.Name = "FILENAME";
-            this.FILENAME.ReadOnly = true;
-            this.FILENAME.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 65;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Path Build";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ISDUP";
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
-            this.Column5.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Override";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 58;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column4.HeaderText = "New Version";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 78;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Detail";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 45;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -332,9 +334,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -371,6 +375,7 @@
         private DataGridViewCheckBoxColumn Column5;
         private DataGridViewCheckBoxColumn Column3;
         private DataGridViewCheckBoxColumn Column4;
+        private DataGridViewTextBoxColumn DirectoryName;
         private DataGridViewButtonColumn Column1;
     }
 }
